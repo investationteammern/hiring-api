@@ -30,7 +30,7 @@ app.use(cors({
 
 
 
-// app.use('/v1/api', JobRoutes);
+app.use('/v1/api', JobRoutes);
 
 const port = process.env.PORT || 5000;
 
