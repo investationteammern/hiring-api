@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 const allowedOrigins = [
     'http://localhost:5173',
-    'https://hiring-web-blush.vercel.app/',
+    'https://hiring-web-blush.vercel.app',
 ]
 
 // ✅ Use CORS with dynamic origin checking
