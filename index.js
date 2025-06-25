@@ -26,7 +26,11 @@ app.use(cors({
     },
     // credentials: true, // If using cookies or sessions
 }))
+app.options('*', cors());
 
+app.get("/", (req, res) => {
+    res.status(200).send("Investation team!!");
+});
 
 app.use('/v1/api', JobRoutes);
 
