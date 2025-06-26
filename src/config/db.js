@@ -3,7 +3,7 @@ import 'dotenv/config'
 
 export const dbConnection = async () => {
     try {
-        let mongo_url = process.env.MONGO_URL;
+        let mongo_url = process.env.MONGODB_URL;
         await mongoose.connect(mongo_url);
         console.log('DATABASE CONNECTED...')
     } catch (error) {
