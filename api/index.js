@@ -41,9 +41,8 @@ app.use('/v1/api', JobRoutes);
 
 const port = process.env.PORT || 5000;
 
-app.listen(port, () => {
-    console.log(`App running at port ${port}`);
-    dbConnection();
-})
+dbConnection();
+
+
 
 export default app
