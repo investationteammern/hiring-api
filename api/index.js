@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import { dbConnection } from './src/config/db.js';
-import JobRoutes from './src/routes/jobCategory.js';
+import { dbConnection } from '../src/config/db.js';
+import JobRoutes from '../src/routes/jobCategory.js';
 
 
 const app = express();
@@ -37,3 +37,5 @@ app.listen(port, () => {
     console.log(`App running at port ${port}`);
     dbConnection();
 })
+
+export default app
