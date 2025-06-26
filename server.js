@@ -1,5 +1,4 @@
 import express from 'express';
-//import cookieParser from "cookie-parser";
 import cors from 'cors';
 import { dbConnection } from './src/config/db.js';
 import JobRoutes from './src/routes/jobCategory.js';
