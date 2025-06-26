@@ -26,7 +26,15 @@ app.use(cors({
     // credentials: true, // If using cookies or sessions
 }))
 // app.options('*', cors());
+app.use((req, res, next) => {
+    console.log(`[REQUEST] ${req.method} ${req.url}`)
+    next()
+})
 
+app.use((err, req, res, next) => {
+    console.error('[SERVER ERROR]', err.stack || err)
+    res.status(500).json({ message: err.message || 'Unknown Server Error' })
+})
 
 
 app.use('/v1/api', JobRoutes);
